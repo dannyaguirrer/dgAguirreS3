@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dgAguirreS3.Views.vPrincipal"
+             Title="vPrincipal">
+    <VerticalStackLayout>
+        
+        <Label x:Name="lblUsuario" HorizontalTextAlignment="End"
+               FontSize="14" />
+        <Label 
+           Text="Pantalla principal"
+            FontSize="Title"
+             VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Button x:Name="btnInicio"
+    Text="Volver a Inicio de secion"
+    Clicked="btnInicio_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>

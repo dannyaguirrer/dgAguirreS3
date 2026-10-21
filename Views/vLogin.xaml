@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dgAguirreS3.Views.vLogin"
+             Title="vLogin">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="15">
+        <Label 
+            Text="Bienvenidos al inicio de sesión"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <!--IMAGENES-->
+        <!--1. ENLACE WEB QUE TENGA EXTENCION JPG-PNG-->
+        <!--2. IMAGENES QUE ESTEN EN LA CARPETA DE RECURSOS-->
+        
+        <Image
+            Source="login.png"
+            WidthRequest="100"
+            HeightRequest="100"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <!--para definir cuantas columnas y filas tiene tipo tabla usamos grid-->
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="Center"
+              RowSpacing="10"
+              ColumnSpacing="10">
+
+            <Grid.RowDefinitions>
+                <!--definimos las filas para nuestra pantalla de login, user una fila, pass otra frila y los botones otra total 3-->
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--aqui definimos laa columas, en este caso solo son 2, donde van los labels o titulos y las cajas de etxto a la derecha-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Label
+                Text="Usuario:"
+                FontSize="18"
+                Grid.Row="0"
+                Grid.Column="0" />
+            <!-- lo que hicimos arriba es ubicamos la posicion del label, en este caso al primera posicion es-->
+            <Entry  x:Name="txtUsuario" Placeholder="Ingrese el usuario"
+                   Grid.Row="0"
+                    Grid.Column="1"/>
+                
+            <Label Text="Contraseña:"
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.Column="0" />
+
+            <Entry x:Name="txtContraseña" Placeholder="Ingrese la contraseña"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   IsPassword="True"/>
+
+            <Button
+                x:Name="btnIniciarSesion" Text="Iniciar Sesión"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="1"
+                    Clicked="btnIniciarSesion_Clicked"/> 
+            <Button 
+                    x:Name="btnRegistrarse" Text="Registrarse"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Clicked="btnRegistrarse_Clicked" />
+
+        </Grid>         
+           
+        
+    </VerticalStackLayout>
+</ContentPage>
